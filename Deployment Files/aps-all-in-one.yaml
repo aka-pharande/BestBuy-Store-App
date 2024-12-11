@@ -518,14 +518,14 @@ spec:
               value: "True"
             - name: AZURE_OPENAI_API_VERSION
               value: "2024-07-01-preview"
-            - name: AZURE_OPENAI_DEPLOYMENT_NAME # required if using Azure OpenAI
-              value: ""
-            - name: AZURE_OPENAI_ENDPOINT # required if using Azure OpenAI
-              value: ""
+            - name: AZURE_OPENAI_DEPLOYMENT_NAME
+              value: "gpt-4"
+            - name: AZURE_OPENAI_ENDPOINT
+              value: "https://cst8915-aka.openai.azure.com/"
             - name: AZURE_OPENAI_DALLE_ENDPOINT
-              value: ""
+              value: "https://cst8915-aka.openai.azure.com/"
             - name: AZURE_OPENAI_DALLE_DEPLOYMENT_NAME
-              value: ""
+              value: "dall-e-3"
             - name: OPENAI_API_KEY # always required
               valueFrom:
                 secretKeyRef:
