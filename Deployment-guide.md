@@ -32,11 +32,11 @@ To begin, clone the [**Best Buy Store Repository**](https://github.com/aka-phara
  **Review the Deployment Files**:
    - Navigate to the `Deployment Files` folder
    - This folder contains YAML files for deploying all necessary Kubernetes resources, including services, deployments, StatefulSets, ConfigMaps, and Secrets.
-   - There's a dedicated deployment file for each microservice if you wish to deploy them individually. Or you could use Kustomize to deploy them all together. 
+   - There's a dedicated deployment file for each microservice if you wish to deploy them individually. Or you could use `kustomize.yaml` to deploy all the services at once. 
 
 ---
 ## Step 2: Set Up the AKS Cluster
-Create an AKS cluster with one worker node and one master/system node. For this step, you can refer to: [Lab 6](https://github.com/ramymohamed10/Lab6_24F_CST8915)
+Create an AKS cluster with one worker node and one master/system node.
 
 1. **Log in to Azure Portal:**
    - Go to [https://portal.azure.com](https://portal.azure.com) and log in with your Azure account.
