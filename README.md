@@ -2,7 +2,18 @@
 
 Welcome to the Best Buy Store application.
 
-This sample demo app consists of a group of containerized microservices that can be easily deployed into a Kubernetes cluster. This is meant to show a realistic scenario using a polyglot architecture, event-driven design, and common open source back-end services (eg - RabbitMQ, MongoDB). The application also leverages OpenAI's models to generate product descriptions and images. This can be done using either [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/overview) or [OpenAI](https://openai.com/).
+The Best Buy Store Application is a cloud-native, microservices-based e-commerce demo app designed to showcase modern application architecture principles. The app uses a polyglot programming approach, an event-driven design, and leverages both managed and open-source backing services. By deploying this application in a Kubernetes cluster, you can explore the benefits of container orchestration and cloud-native technologies.
+
+Key features include:
+
+- Customer-facing Store-Front: Enabling users to browse and place orders.
+Employee-focused Store-Admin: Facilitating product management and order tracking.
+- AI Integration: Harnessing GPT-4 and DALL-E for generating intelligent product descriptions and creative images.
+- Event-Driven Order Processing: Using Azure Service Bus for scalable and reliable messaging.
+- Persistent Data Storage: MongoDB for storing product and order information.
+- Microservices Architecture: Independent services built with different technologies (Vue.js, Node.js, Rust, Python, Go).
+
+The application demonstrates modern software development practices, including infrastructure as code, containerization, and managed services integration, making it a powerful example of a full-stack cloud-native solution.
 
 ## Architecture
 
@@ -10,23 +21,20 @@ The application has the following services:
 
 | Service | Description | Github Repo |
 | --- | --- | --- |
-| `store-front` | Web app for customers to place orders (Vue.js) | [LA2-Store-Front](https://github.com/aka-pharande/CST8915-LA2-Store-Front) |
-| `store-admin` | Web app used by store employees to view orders in queue and manage products (Vue.js) | [LA2-Store-Admin](https://github.com/aka-pharande/CST8915-LA2-Store-Admin) |
-| `order-service` | This service is used for placing orders (Javascript) | [LA2-Order-Service](https://github.com/aka-pharande/CST8915-LA2-Order-Service) |
-| `product-service` | This service is used to perform CRUD operations on products (Rust) | [LA2-Product-Service](https://github.com/aka-pharande/CST8915-LA2-Product-Service) |
-| `makeline-service` | This service handles processing orders from the queue and completing them (Golang) | [LA2-Makeline-Service](https://github.com/aka-pharande/CST8915-LA2-Makeline-Service) |
-| `ai-service` | Optional service for adding generative text and graphics creation (Python) | [LA2-AI-Service](https://github.com/aka-pharande/CST8915-LA2-AI-Service) |
-| `rabbitmq` | RabbitMQ for an order queue | [rabbitmq](https://github.com/docker-library/rabbitmq) |
+| `store-front` | Web app for customers to place orders (Vue.js) | [store-front](https://github.com/aka-pharande/CST8915-LA2-Store-Front) |
+| `store-admin` | Web app used by store employees to view orders in queue and manage products (Vue.js) | [store-admin](https://github.com/aka-pharande/CST8915-LA2-Store-Admin) |
+| `order-service` | This service is used for placing orders (Javascript) | [order-service](https://github.com/aka-pharande/CST8915-LA2-Order-Service) |
+| `product-service` | This service is used to perform CRUD operations on products (Rust) | [product-service](https://github.com/aka-pharande/CST8915-LA2-Product-Service) |
+| `makeline-service` | This service handles processing orders from the queue and completing them (Golang) | [makeline-service](https://github.com/aka-pharande/CST8915-LA2-Makeline-Service) |
+| `ai-service` | Optional service for adding generative text and graphics creation (Python) | [ai-service](https://github.com/aka-pharande/CST8915-LA2-AI-Service) |
 | `mongodb` | MongoDB instance for persisted data | [mongodb](https://github.com/docker-library/mongo) |
-| `virtual-customer` | Simulates order creation on a scheduled basis (Rust) | [LA2-Virtual-Customer](https://github.com/aka-pharande/CST8915-LA2-Virtual-Customer) |
-| `virtual-worker` | Simulates order completion on a scheduled basis (Rust) | [LA2-Virtual-Worker](https://github.com/aka-pharande/CST8915-LA2-Virtual-Worker) |
+| `virtual-customer` | Simulates order creation on a scheduled basis (Rust) | [virtual-customer](https://github.com/aka-pharande/CST8915-LA2-Virtual-Customer) |
+| `virtual-worker` | Simulates order completion on a scheduled basis (Rust) | [virtual-worker](https://github.com/aka-pharande/CST8915-LA2-Virtual-Worker) |
 
 
-![Logical Application Architecture Diagram](assets/Algonquin%20Pet%20Store%20On%20Steroids.png)
+![Logical Application Architecture Diagram](assets/bestbuy-system-architecture.png)
 
-## Run the app on Azure Kubernetes Service (AKS)
+## Getting Started
 
-You can use the kubernetes YAML files provided in the [Deployment Files](./Deployment%20Files/) folder to deploy the app to an AKS cluster.
-
-
+For detailed deployment instructions, see the [Deployment Guide](./Deployment-guide.md).
 
