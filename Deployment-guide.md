@@ -192,22 +192,21 @@ You will need to create a Service Bus namespace and a queue. You can do this usi
 ### Task 1: Create Service Bus
 
 ```bash
-az group create --name <resource-group-name> --location <location>
-az servicebus namespace create --name <namespace-name> --resource-group <resource-group-name>
-az servicebus queue create --name orders --namespace-name <namespace-name> --resource-group <resource-group-name>
+az servicebus namespace create --name asb-cst8915-la2 --resource-group rg-cst8915-la2
+az servicebus queue create --name orders --namespace-name asb-cst8915-la2 --resource-group rg-cst8915-la2
 ```
 ---
 ### Task 2: Create Shared Access Policies for Authentication
 
 **Sender Policy for Order Service** 
 ```bash
-az servicebus queue authorization-rule create --name sender --namespace-name <namespace-name> --resource-group <resource-group-name> --queue-name orders --rights Send
+az servicebus queue authorization-rule create --name sender --namespace-name asb-cst8915-la2 --resource-group rg-cst8915-la2 --queue-name orders --rights Send
 ```
 
 
 **Listener Policy for Makeline Service**
 ```bash
-az servicebus queue authorization-rule create --name listener --namespace-name <namespace-name> --resource-group <resource-group-name> --queue-name orders --rights Listen
+az servicebus queue authorization-rule create --name listener --namespace-name asb-cst8915-la2 --resource-group rg-cst8915-la2 --queue-name orders --rights Listen
 ```
 
 ---
