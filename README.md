@@ -33,7 +33,7 @@ The application demonstrates modern software development practices, including in
 | `virtual-customer` | Simulates order creation on a scheduled basis (Rust) | [virtual-customer](https://github.com/aka-pharande/CST8915-LA2-Virtual-Customer) |
 | `virtual-worker` | Simulates order completion on a scheduled basis (Rust) | [virtual-worker](https://github.com/aka-pharande/CST8915-LA2-Virtual-Worker) |
 
-### Table of Docker Images**:    
+### Table of Docker Images
 
 | **Service**         | **Docker Image Link**                             |
 |----------------------|--------------------------------------------------|
@@ -57,17 +57,13 @@ For detailed deployment instructions, see the [Deployment Guide](./Deployment-gu
 
 ## Bonus (CI/CD)
 
-To streamline the CI/CD processes for all microservices, I implemented a **reusable workflow** using GitHub Actions. Instead of duplicating the CI/CD pipeline (`ci_cd.yaml`) in each repository, a (**centralized reusable workflow**)[https://github.com/aka-pharande/CST8915-LA2-BestBuy-App/blob/main/.github/workflows/ci_cd.yaml] was created in this repository. This workflow is invoked by each microservice repository, passing the required variables and secrets.
+The CI/CD pipeline automates building, testing, pushing Docker images to Docker Hub, and deploying microservices to Kubernetes. To streamline these processes, I implemented a **reusable workflow** using GitHub Actions. Instead of duplicating the CI/CD pipeline (`ci_cd.yaml`) in each repository, a [**centralized reusable workflow**](https://github.com/aka-pharande/CST8915-LA2-BestBuy-App/blob/main/.github/workflows/ci_cd.yaml) was created in this repository. This workflow is invoked by each microservice repository, passing the required variables and secrets.
+
 
 ### **Benefits**
 - **Centralized Management**: CI/CD logic is maintained in one place, reducing duplication.
 - **Consistency**: Ensures uniform build, test, and deployment practices across all services.
 - **Efficiency**: Simplifies updates and maintenance.
-
-### **Key Features**
-1. **Build and Test**: Builds Docker images and runs unit and integration tests.
-2. **Push to Docker Hub**: Publishes Docker images with version and `latest` tags.
-3. **Deploy to Kubernetes**: Deploys microservices to AKS with seamless integration with Azure Service Bus.
 
 ### **Example Configuration**
 Below is how a microservice (e.g., `store-front`) invokes the reusable workflow:
