@@ -55,7 +55,7 @@ Create an AKS cluster with one worker node and one master/system node.
      - **Subscription**: Select your subscription.
      - **Resource group**: Choose `rg-cst8915-la2`.
      - **Cluster preset configuration**: Choose `Dev/Test`.
-     - **Kubernetes cluster name**: `BestBuyStoreCluster`.
+     - **Kubernetes cluster name**: `aks-cst8915-la2`.
      - **Region**: Same as your resource group (e.g., `Canada`).
      - **Availability zones**: `None`.
      - **AKS pricing tier**: `Free`.
