@@ -86,7 +86,7 @@ jobs:
 
 ```
 
-### **Demo Video**
+## **Demo Video**
 The [Demo Video](https://youtu.be/qCxUtX_D3Ck) showcases:
 - The application in action after deployment to the AKS cluster.
 - AI-generated product descriptions and images using GPT-4 and DALL-E.
