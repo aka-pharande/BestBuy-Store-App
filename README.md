@@ -87,7 +87,7 @@ jobs:
 ```
 
 ### **Demo Video**
-The [Demo Video](https://youtu.be/your-demo-video-link) showcases:
+The [Demo Video](https://youtu.be/qCxUtX_D3Ck) showcases:
 - The application in action after deployment to the AKS cluster.
 - AI-generated product descriptions and images using GPT-4 and DALL-E.
 - Integration with the managed Azure Service Bus.
