@@ -266,7 +266,23 @@ az servicebus queue authorization-rule create --name listener --namespace-name a
     - Set the value of the  `ORDER_QUEUE_URI` env variable to "amqps://$HOSTNAME" where $HOSTNAME should be replaced with hostname from the previous step.
 
 ---
-## Step 5: Deploy and Validate the Application
+## Step 5: Deploy the ConfigMaps and Secrets
+- Deploy the ConfigMap for RabbitMQ Plugins:
+   ```bash
+   kubectl apply -f config-maps.yaml
+   ```
+- Create and Deploy the Secreta:  
+   ```bash
+   kubectl apply -f secrets.yaml
+   ```
+- Verify:
+   ```bash
+   kubectl get configmaps
+   kubectl get secrets
+   ```
+
+---
+## Step 6: Deploy and Validate the Application
    
 ### Task 1: Deploy the Application
 
@@ -298,7 +314,7 @@ az servicebus queue authorization-rule create --name listener --namespace-name a
    - Access the Store Admin app at the external IP on port 80.
 
 ---
-## Step 6: Testing
+## Step 7: Testing
 
 ### Task 1: Automated Testing With Virtual Customer and Worker
    ```bash
