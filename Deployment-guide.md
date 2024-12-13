@@ -266,11 +266,7 @@ az servicebus queue authorization-rule create --name listener --namespace-name a
     - Set the value of the  `ORDER_QUEUE_URI` env variable to "amqps://$HOSTNAME" where $HOSTNAME should be replaced with hostname from the previous step.
 
 ---
-## Step 5: Deploy the ConfigMaps and Secrets
-- Deploy the ConfigMap for RabbitMQ Plugins:
-   ```bash
-   kubectl apply -f config-maps.yaml
-   ```
+## Step 5: Deploy the Secrets
 - Create and Deploy the Secreta:  
    ```bash
    kubectl apply -f secrets.yaml
