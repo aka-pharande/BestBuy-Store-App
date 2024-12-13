@@ -100,7 +100,7 @@ Create an AKS cluster with one worker node and one master/system node.
 ---
 
 ## Step 3: Set Up the AI Backing Services
-To enable AI-generated product descriptions and image generation features, you will deploy the required **Azure OpenAI Services** for GPT-4 (text generation) and DALL-E 3 (image generation). This step is essential to configure the **AI Service** component in the Algonquin Pet Store application.
+To enable AI-generated product descriptions and image generation features, you will deploy the required **Azure OpenAI Services** for GPT-4 (text generation) and DALL-E 3 (image generation). This step is essential to configure the **AI Service** component in the Best Buy Store application.
 
 ### Task 1: Create an Azure OpenAI Service Instance
 
