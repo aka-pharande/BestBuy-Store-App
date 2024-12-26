@@ -17,6 +17,13 @@ Key features include:
 
 The application demonstrates modern software development practices, including infrastructure as code, containerization, and managed services integration, making it a powerful example of a full-stack cloud-native solution.
 
+## **Demo Video**
+The [Demo Video](https://youtu.be/qCxUtX_D3Ck) showcases:
+- The application in action after deployment to the AKS cluster.
+- AI-generated product descriptions and images using GPT-4 and DALL-E.
+- Integration with the managed Azure Service Bus.
+- CI/CD pipelines automating build, test, and deployment for all microservices.
+
 ## Architecture
 
 ### Table of Microservice Repositories  
@@ -413,10 +420,3 @@ jobs:
       KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
 
 ```
-
-## **Demo Video**
-The [Demo Video](https://youtu.be/qCxUtX_D3Ck) showcases:
-- The application in action after deployment to the AKS cluster.
-- AI-generated product descriptions and images using GPT-4 and DALL-E.
-- Integration with the managed Azure Service Bus.
-- CI/CD pipelines automating build, test, and deployment for all microservices.
