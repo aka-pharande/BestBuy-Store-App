@@ -390,7 +390,7 @@ az servicebus queue authorization-rule create --name listener --namespace-name a
 - AI Service: Submit a product description and image request and ensure the response includes a generated description and image.
 
 
-## Bonus (CI/CD)
+## CI/CD
 
 The CI/CD pipeline automates building, testing, pushing Docker images to Docker Hub, and deploying microservices to Kubernetes. To streamline these processes, I implemented a **reusable workflow** using GitHub Actions. Instead of duplicating the CI/CD pipeline (`ci_cd.yaml`) in each repository, a [**centralized reusable workflow**](https://github.com/aka-pharande/CST8915-LA2-BestBuy-App/blob/main/.github/workflows/ci_cd.yaml) was created in this repository. This workflow is invoked by each microservice repository, passing the required variables and secrets.
 
